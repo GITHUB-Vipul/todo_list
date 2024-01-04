@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body style="background-color: rgb(24,25,24);">
+ <section class="homepage">  
+<div class="head">
+     <div>
+     <img  src="./assets/rocket.svg">
+     <img src="./assets/todo.svg">
+     </div>
+    <div class="head-part2">
+    
+    <input class="input" type="search" value="Search">
+    <button class="btn" id="add-todo">Add <img src="./assets/plus.svg"></button>
+    
+    </div>
+
+</div>
+<div class="body">
+    <div class="body-part1">
+    <div class="info">
+        <div class="created">
+            <img src="./assets/To Do.svg" style="display:flex" id="counter1image1">
+            <img src="./assets/To-do list.svg" style="display:none" id="counter1image2">
+            <div class="counter" id="counter1">0</div>
+        </div>
+        <div class="done">
+            <img src="./assets/High Priority.svg">
+            <div class="counter" id="highPriority">0</div>
+        </div>
+    </div>
+    <div class="list" id="filterList" style="display: none;"></div>
+    <div class="list" id="mainList">
+         
+            <img src="./assets/Clipboard.svg" style="display:flex" >
+            <div style="color:var(--Gray-300, #808080);display:flex" >You have no To-do Items As of now</div>
+         
+    </div>
+    </div>
+    <div class="tasks" >
+        <div class="info">
+            <div class="created">
+                <img src="./assets/Started.svg">
+                <div class="counter" id="Startedcount1">0</div>
+            </div>
+
+    </div>
+    <div class="tasks">
+        <div class="info" style="margin-top: 20px;">
+            <div class="created">
+                <img src="./assets/Completed.svg">
+                <div class="counter" id="completedcount1">0</div>
+            </div>
+           </div>
+   </div>
+</section>
+<div class="pop" id="POPUP">
+   
+       <form class="popup" style="position: relative;" id="form">
+        <span class="material-symbols-outlined" style="color: black; position: absolute; right:0;top:0;" id="close">
+            close
+            </span>
+        <label for="task-name">Task Name</label>
+        <input type="text" id="task-name" name="taskName" value="">
+        <label for="due-date">Due-Date</label>
+        <input type="Date" id="due-date" name="date" value="">
+        <label for="priority">Priority</label>
+        <select name="Priority" id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <label for="status">Status</label>
+          <select name="Status" id="status">
+            <option value="To-do">To-do</option>
+            <option value="Started">Started</option>
+            <option value="Completed">Completed</option>
+          </select>
+        <button class="form-button" type="submit" id="submit">submit</button>
+        
+       </form>
+   
+</div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
